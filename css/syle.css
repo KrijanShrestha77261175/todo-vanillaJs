@@ -1,0 +1,164 @@
+body {
+    margin-inline: 40px;
+    margin-top: 20px;
+    font-family: 'Mooli';
+    color: #343434;
+
+}
+
+#nav-title {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+#list-layout {
+    display: grid;
+    width: 95vw;
+    grid-template-columns: repeat(3, 1fr) ;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+#list-layout > div {
+    text-align: center;
+    position: relative;
+
+}
+
+#todo, #in-process, #completed {
+    background: #FAF9F6;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 8px;
+
+}
+
+#todo-header, #process-header, #completed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    padding-inline: 12px;
+}
+
+#process-count, #todo-count, #completed-count {
+    border-radius: 3px;
+    padding: 4px;
+    border: 1px solid rgba(52, 52, 52, .2);
+    opacity: 0.6;
+    /* color: rgba(80, 200, 120); */
+    font-weight: 600;
+}
+
+#divider {
+    border-top: 1px solid rgba(52, 52, 52, .2);
+    margin-top: 6px;
+}
+
+#todo-add, #process-add, #completed-add {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 6px;
+    background: rgba(80, 200, 120, .2);
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    align-items: center;
+}
+
+#todo-add > button {
+    border: none; 
+    background: none;
+    font-family: 'Mooli';
+}
+
+#modal {
+    display: block;
+    height: auto;
+    width: auto;
+    position: fixed;
+    border-radius: 6px;
+    border: 1px solid rgba(52, 52, 52, .2);
+    margin-top: 2rem;
+    padding: 20px;
+    top: 32%;
+    left: 33.65%;
+    z-index: 1;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background: rgba(250, 249, 246, 0.1);
+}
+
+#modal-header {
+    position: relative;
+
+}
+#close-button {
+    position: absolute;
+    border-radius: 2px;
+   padding: 3px 6px;
+    right:-15px ;
+    top: -15px;
+}
+#close-button:hover {
+    color: #FAF9F6;
+    background: red;
+}
+
+#modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom:1px solid rgba(52, 52, 52, .2);
+}
+
+#list-input {
+    overflow: auto;
+    min-width: 25vw;
+    height: 30vh;
+    margin-top: 20px;
+}
+
+#task-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 18px ;
+    margin-bottom: 5px;
+}
+textarea {
+    font-size: 16px;
+    font-family: 'Mooli';
+    padding: 6px;
+}
+
+#modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 20px;
+    align-items: center; 
+}
+#modal-confirm, #modal-cancel {
+    border-radius: 6px; 
+    padding: 6px; 
+}
+#modal-confirm{
+    background: rgba(80, 200, 120);
+    color:#FAF9F6 ;
+}
+#modal-cancel {
+    background: red;
+    color: #FAF9F6;
+}
+
+
+
+
+
+
+
+

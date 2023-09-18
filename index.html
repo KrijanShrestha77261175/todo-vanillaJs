@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/syle.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"
+    />
+
+    <script src="./js/script.js"></script>
+    <title>To Do App</title>
+  </head>
+  <body>
+    <div>
+      <nav>
+        <span id="nav-title">ToDo List</span>
+      </nav>
+
+      <div id="list-layout">
+        <!-- For todo list -->
+        <div id="todo">
+          <!-- to do header -->
+          <div id="todo-header">
+            <div id="todo-title">Todo</div>
+            <div id="todo-count">#</div>
+          </div>
+
+          <!-- ----divider line---- -->
+          <div id="divider"></div>
+
+          <!-- add a todo button to trigger modal-->
+          <div id="todo-add">
+            <span>Add a task</span>
+            <button>
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+
+          <!-- new added task -->
+          <div id="todo-task">
+
+          </div>
+
+          <!-- Modal for todo task -->
+          <div id="modal">
+            <div id="modal-header">
+              <span id="modal-title">Create a new task</span>
+              <div id="close-button">
+                <i class="fa fa-xmark"></i>
+              </div>
+            </div>
+            <br />
+            <div id="task-detail">
+              <label for="task-title">List Title</label>
+              <textarea
+                name="task-title"
+                id="task-title"
+                cols="50"
+                rows="1"
+                placeholder="Type your title here ..."
+              ></textarea>
+              <br />
+
+              <label for="task-description">List Description</label>
+              <textarea
+                name="task-description"
+                rows="4"
+                cols="50"
+                placeholder="Type your description here..."
+                id="task-description"
+              ></textarea>
+            </div>
+
+            <div id="modal-footer">
+              <div id="modal-cancel">
+                Cancel
+              </div>
+
+              <div id="modal-confirm">
+                Confirm
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- For in process list -->
+        <div id="in-process">
+          <!-- in process header -->
+          <div id="process-header">
+            <div id="process-title">In Process</div>
+            <div id="process-count">#</div>
+          </div>
+
+          <!-- ----divider line---- -->
+          <div id="divider"></div>
+
+          <!-- add a in-process button to trigger modal-->
+          <!-- <div id="process-add">
+            <button style="border: none; background: none">
+              <i class="fa fa-plus"></i>
+            </button>
+          </div> -->
+        </div>
+
+        <!-- For completed list -->
+        <div id="completed">
+          <!-- completed header -->
+          <div id="completed-header">
+            <div id="completed-title">Completed</div>
+            <div id="completed-count">#</div>
+          </div>
+
+          <!-- ----divider line---- -->
+          <div id="divider"></div>
+
+          <!-- add a completed button to trigger modal-->
+          <!-- <div id="completed-add">
+            <button style="border: none; background: none">
+              <i class="fa fa-plus"></i>
+            </button>   
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
