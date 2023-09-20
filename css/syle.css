@@ -1,164 +1,192 @@
 body {
-    margin-inline: 40px;
-    margin-top: 20px;
-    font-family: 'Mooli';
-    color: #343434;
-
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 20px;
+  font-family: "Mooli";
+  color: #343434;
 }
 
 #nav-title {
-    font-size: 3rem;
-    font-weight: 600;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 #list-layout {
-    display: grid;
-    width: 95vw;
-    grid-template-columns: repeat(3, 1fr) ;
-    gap: 60px;
-    margin-top: 40px;
+  display: grid;
+  width: 95vw;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  margin-top: 40px;
 }
 
 #list-layout > div {
-    text-align: center;
-    position: relative;
-
+  text-align: center;
+  position: relative;
 }
 
-#todo, #in-process, #completed {
-    background: #FAF9F6;
-    padding: 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border-radius: 8px;
-
+#todo,
+#in-process,
+#completed {
+  background: #faf9f6;
+  padding: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 8px;
+  /* z-index: 2; */
 }
 
-#todo-header, #process-header, #completed-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 600;
-    font-size: 20px;
-    padding-inline: 12px;
+#todo-header,
+#process-header,
+#completed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  padding-inline: 12px;
 }
 
-#process-count, #todo-count, #completed-count {
-    border-radius: 3px;
-    padding: 4px;
-    border: 1px solid rgba(52, 52, 52, .2);
-    opacity: 0.6;
-    /* color: rgba(80, 200, 120); */
-    font-weight: 600;
+#process-count,
+#todo-count,
+#completed-count {
+  border-radius: 3px;
+  padding: 4px;
+  border: 1px solid rgba(52, 52, 52, 0.2);
+  opacity: 0.6;
+  /* color: rgba(80, 200, 120); */
+  font-weight: 600;
 }
 
 #divider {
-    border-top: 1px solid rgba(52, 52, 52, .2);
-    margin-top: 6px;
+  border-top: 1px solid rgba(52, 52, 52, 0.2);
+  margin-top: 6px;
 }
 
-#todo-add, #process-add, #completed-add {
-    margin-top: 20px;
-    padding: 12px;
-    border-radius: 6px;
-    background: rgba(80, 200, 120, .2);
-    display: flex;
-    justify-content: space-between;
-    width: 150px;
-    align-items: center;
+#todo-add,
+#process-add,
+#completed-add {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 6px;
+  background: rgba(80, 200, 120, 0.2);
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  align-items: center;
 }
 
 #todo-add > button {
-    border: none; 
-    background: none;
-    font-family: 'Mooli';
+  border: none;
+  background: none;
+  font-family: "Mooli";
 }
 
 #modal {
-    display: block;
-    height: auto;
-    width: auto;
-    position: fixed;
-    border-radius: 6px;
-    border: 1px solid rgba(52, 52, 52, .2);
-    margin-top: 2rem;
-    padding: 20px;
-    top: 32%;
-    left: 33.65%;
-    z-index: 1;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    background: rgba(250, 249, 246, 0.1);
+  display: none;
+  height: auto;
+  width: auto;
+  position: fixed;
+  border-radius: 6px;
+  border: 1px solid rgba(52, 52, 52, 0.2);
+  margin-top: 2rem;
+  padding: 20px;
+  top: 25%;
+  left: 33.65%;
+  z-index: 10;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background: white;
 }
 
 #modal-header {
-    position: relative;
-
+  position: relative;
 }
 #close-button {
-    position: absolute;
-    border-radius: 2px;
-   padding: 3px 6px;
-    right:-15px ;
-    top: -15px;
+  position: absolute;
+  border-radius: 2px;
+  padding: 3px 6px;
+  right: -15px;
+  top: -15px;
+  cursor: pointer;
 }
 #close-button:hover {
-    color: #FAF9F6;
-    background: red;
+  color: #faf9f6;
+  background: red;
 }
 
 #modal-title {
-    font-size: 20px;
-    font-weight: 600;
-    border-bottom:1px solid rgba(52, 52, 52, .2);
-}
-
-#list-input {
-    overflow: auto;
-    min-width: 25vw;
-    height: 30vh;
-    margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(52, 52, 52, 0.2);
 }
 
 #task-detail {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 12px;
 }
 
 label {
-    font-size: 18px ;
-    margin-bottom: 5px;
+  font-size: 18px;
+  margin-bottom: 5px;
 }
 textarea {
-    font-size: 16px;
-    font-family: 'Mooli';
-    padding: 6px;
+  font-size: 16px;
+  font-family: "Mooli";
+  padding: 6px;
 }
 
 #modal-footer {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-    gap: 20px;
-    align-items: center; 
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  gap: 20px;
+  align-items: center;
 }
-#modal-confirm, #modal-cancel {
-    border-radius: 6px; 
-    padding: 6px; 
+#modal-confirm,
+#modal-cancel {
+  border-radius: 6px;
+  padding: 6px;
 }
-#modal-confirm{
-    background: rgba(80, 200, 120);
-    color:#FAF9F6 ;
+#modal-confirm {
+  background: rgba(80, 200, 120);
+  color: #faf9f6;
 }
 #modal-cancel {
-    background: red;
-    color: #FAF9F6;
+  background: red;
+  color: #faf9f6;
+}
+#dynamicDiv {
+  position: relative;
+}
+.todo-task {
+  display: flex;
+  border-radius: 6px;
+  /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  height: 8vh;
+  background: rgba(80, 200, 120, 0.2);
+}
+.leftDiv {
+  display: flex;
+  gap: 10px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+button {
+    border: none;
+    background: none;
+    font-family: 'Mooli';
+    font-size: 16px;
+}
 
-
-
-
-
-
+.access-div {
+  display: block;
+  
+}
 
