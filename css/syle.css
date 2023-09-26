@@ -1,9 +1,10 @@
 body {
-  margin-left: 40px;
-  margin-right: 40px;
+  /* margin-left: 28px; */
   margin-top: 20px;
   font-family: "Mooli";
   color: #343434;
+  /* background-color: red; */
+  min-width: fit-content;
 }
 
 #nav-title {
@@ -13,10 +14,13 @@ body {
 
 #list-layout {
   display: grid;
-  width: 95vw;
+  padding: 0 auto;
+  /* margin-right: 40px; */
+
+  /* width: 95vw; */
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
-  margin-top: 40px;
+  margin: 40px 20px 0px;
 }
 
 #list-layout > div {
@@ -41,7 +45,8 @@ body {
   justify-content: space-between;
   align-items: center;
   font-weight: 600;
-  font-size: 20px;
+  font-size: x-large;
+
   padding-inline: 12px;
 }
 
@@ -60,14 +65,23 @@ body {
   border-top: 1px solid rgba(52, 52, 52, 0.2);
   margin-top: 6px;
 }
+#todo-delete-all {
+  background: rgba(194, 24, 7, 0.8);
+  color: white;
+}
+#todo-add {
+  background: rgba(80, 200, 120, 0.2);
+}
+
+#todo-delete-btn > i {
+  color: white;
+}
 
 #todo-add,
-#process-add,
-#completed-add {
+#todo-delete-all {
   margin-top: 20px;
   padding: 12px;
   border-radius: 6px;
-  background: rgba(80, 200, 120, 0.2);
   display: flex;
   justify-content: space-between;
   width: 150px;
@@ -161,10 +175,11 @@ textarea {
 }
 .todo-task {
   display: flex;
+  flex-direction: column;
   border-radius: 6px;
   /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
   padding: 10px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   margin-top: 24px;
   height: 8vh;
@@ -177,16 +192,58 @@ textarea {
 
 button:hover {
   cursor: pointer;
+  opacity: 0.5;
 }
 button {
-    border: none;
-    background: none;
-    font-family: 'Mooli';
-    font-size: 16px;
+  border: none;
+  background: none;
+  font-family: "Mooli";
+  font-size: 16px;
 }
 
 .access-div {
   display: block;
-  
 }
 
+.todo-task-detail {
+  display: flex;
+  align-items: center;
+}
+.todo-task-detail > span {
+  font-size: 22px;
+  font-weight: 600;
+}
+.todo-btn {
+  position: absolute;
+  right: 5px;
+}
+.task-description {
+  display: none;
+  font-style: italic;
+}
+
+.crud-div {
+  display: none;
+  position: absolute;
+  left: 70px;
+  top: -14px;
+  width: 135px;
+  z-index: 10;
+  border-radius: 6px;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.edit,
+.delete,
+.progress-shift {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 6px;
+}
+.edit {
+  border-bottom: 1px solid rgba(52, 52, 52, 0.2);
+}
+.delete {
+  border-bottom: 1px solid rgba(52, 52, 52, 0.2);
+}
